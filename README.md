@@ -2,9 +2,7 @@
 
 Made for fun in order to try and understand a deep learning library from scratch.
 
-All the code is written using the "The spelled-out intro to neural networks and backpropagation: building micrograd" by Andrej Karpathy
-
-The tutorial can be found on https://www.youtube.com/watch?v=VMj-3S1tku0
+All the code is written using the ["The spelled-out intro to neural networks and backpropagation: building micrograd" by Andrej Karpathy](https://www.youtube.com/watch?v=VMj-3S1tku0)
 
 This is written in javascript in order "to type it out" myself - in another language.
 
