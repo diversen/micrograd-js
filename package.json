@@ -1,0 +1,27 @@
+{
+  "name": "micrograd-js",
+  "version": "1.0.0",
+  "description": "Made for fun - to try and understand a deep learning library from scratch.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Dennis Iversen",
+  "license": "MIT",
+  "type": "module",
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/diversen/micrograd-js.git"
+  },
+  "keywords": [
+    "micrograd-js",
+    "micrograd"
+  ],
+  "bugs": {
+    "url": "https://github.com/diversen/micrograd-js/issues"
+  },
+  "homepage": "https://github.com/diversen/micrograd-js#readme"
+}
