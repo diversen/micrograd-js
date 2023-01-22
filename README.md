@@ -20,7 +20,9 @@ I know it won't work with nodejs <= v12.22.4
 
     nvm use v14.17.4
 
-## Example
+## Test
+
+    git clone https://github.com/diversen/micrograd-js.git
 
 This runs the main example from the tutorial:
 
