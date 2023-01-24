@@ -95,7 +95,7 @@ class Value {
     }
 
     exp() {
-        // Write tanh in terms of e exp
+
         let x = this.data
         let t = Math.exp(x)
         let out = new Value(t, [this], 'exp')
