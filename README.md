@@ -26,11 +26,15 @@ This runs the main example from the tutorial:
 
     node test/mlp.js
 
+[test/mlp.js](test/mlp.js)
+
+
 This runs the OR, AND, XOR gates example:
 
     node test/gates.js
-    
-[mlp.js](test/mlp.js)
+
+[test/gates.js](test/gates.js)
+
 
 ## Install 
 
