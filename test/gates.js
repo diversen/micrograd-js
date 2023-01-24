@@ -4,28 +4,26 @@ import { MLP } from '../neuron.js'
 
 let log = console.log
 
-function getTrainedMLP(xs, ys) {
-    // Create a new MLP with 2 inputs, 1 hidden layer with 2 neurons, and 1 output
-    let n = new MLP(2, [2, 1])
-
+function getTrainedMLP(mlp, xs, ys) {
+    
     // Train the MLP
     for (let i = 0; i < 1000; i++) {
         xs.forEach((x, i) => {
             let y = ys[i]
-            let ypred = n.forward(x)
+            let ypred = mlp.forward(x)
             let loss = new Value(y, [], '', 'loss')
             loss = loss.sub(ypred).pow(2)
-            for (let p of n.parameters()) {
+            for (let p of mlp.parameters()) {
                 p.grad = 0.0
             }
             loss.backward()
-            for (let p of n.parameters()) {
+            for (let p of mlp.parameters()) {
                 p.data += -0.05 * p.grad
             }
         })
     }
 
-    return n;
+    return mlp;
 }
 
 // Training data
@@ -37,7 +35,10 @@ let xs = [
 ]
 
 let ys = [0.0, 1.0, 1.0, 1.0]
-let n = getTrainedMLP(xs, ys)
+
+// Create a new MLP with 2 inputs, 1 hidden layer with 2 neurons, and 1 output
+let mlp = new MLP(2, [2, 1])
+let n = getTrainedMLP(mlp, xs, ys)
 
 log ("Test on data", xs)
 
@@ -46,8 +47,9 @@ for (let x of xs) {
     log(n.forward(x).data)
 }
 
+mlp = new MLP(2, [2, 1])
 ys = [0.0, 0.0, 0.0, 1.0]
-n = getTrainedMLP(xs, ys)
+n = getTrainedMLP(mlp, xs, ys)
 
 log("Predictions after training (AND gate)")
 for (let x of xs) {
@@ -55,8 +57,11 @@ for (let x of xs) {
 }
 
 log("Predictions after training (XOR gate)")
+
+// XOR gate. Add an extra neuron to the hidden layer
+mlp = new MLP(2, [3, 1])
 ys = [0.0, 1.0, 1.0, 0.0]
-n = getTrainedMLP(xs, ys)
+n = getTrainedMLP(mlp, xs, ys)
 for (let x of xs) {
     log(n.forward(x).data)
 }
