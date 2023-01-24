@@ -1,6 +1,6 @@
 {
   "name": "micrograd-js",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Made for fun - to try and understand a deep learning library from scratch.",
   "main": "index.js",
   "scripts": {
