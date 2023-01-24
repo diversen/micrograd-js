@@ -55,7 +55,7 @@ for (let x of xs) {
 }
 
 // XOR gate. Add an extra neuron to the hidden layer
-mlp = new MLP(2, [3, 1])
+mlp = new MLP(2, [4, 1])
 ys = [0.0, 1.0, 1.0, 0.0]
 n = getTrainedMLP(mlp, xs, ys)
 log("Predictions after training (XOR gate)")
@@ -76,6 +76,8 @@ log("Predictions after training (NOT gate)")
 for (let x of xs) {
     log(n.forward(x).data)
 }
+
+
 
 
 
