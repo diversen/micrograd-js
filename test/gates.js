@@ -66,7 +66,7 @@ for (let x of xs) {
     log(n.forward(x).data)
 }
 
-// NOT gate
+log("Predictions after training (NOT gate)")
 mlp = new MLP(1, [2, 1])
 xs = [
     [0.0], [1.0]
