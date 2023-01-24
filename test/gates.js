@@ -54,7 +54,7 @@ for (let x of xs) {
     log(n.forward(x).data)
 }
 
-// XOR gate. Add an extra neuron to the hidden layer
+// XOR gate. 4 neurons in the hidden layer
 mlp = new MLP(2, [4, 1])
 ys = [0.0, 1.0, 1.0, 0.0]
 n = getTrainedMLP(mlp, xs, ys)
@@ -63,6 +63,7 @@ for (let x of xs) {
     log(n.forward(x).data)
 }
 
+// NOT gate
 mlp = new MLP(1, [2, 1])
 xs = [
     [0.0], [1.0]
