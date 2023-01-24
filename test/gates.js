@@ -66,6 +66,17 @@ for (let x of xs) {
     log(n.forward(x).data)
 }
 
+// NOT gate
+mlp = new MLP(1, [2, 1])
+xs = [
+    [0.0], [1.0]
+]
+ys = [1.0, 0.0]
+n = getTrainedMLP(mlp, xs, ys)
+for (let x of xs) {
+    log(n.forward(x).data)
+}
+
 
 
 
