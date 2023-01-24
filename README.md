@@ -29,7 +29,7 @@ This runs the main example from the tutorial:
 [test/mlp.js](test/mlp.js)
 
 
-This runs the OR, AND, XOR gates example:
+This runs the OR, AND, XOR, NOT gates example:
 
     node test/gates.js
 
