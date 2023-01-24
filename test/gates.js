@@ -1,9 +1,7 @@
 import { Value } from '../engine.js'
 import { MLP } from '../neuron.js'
 
-/**
- * This is the main example used in the tutorial
- */
+
 let log = console.log
 
 function getTrainedMLP(xs, ys) {
@@ -38,7 +36,6 @@ let xs = [
     [1.0, 1.0],
 ]
 
-// train OR gate
 let ys = [0.0, 1.0, 1.0, 1.0]
 let n = getTrainedMLP(xs, ys)
 
